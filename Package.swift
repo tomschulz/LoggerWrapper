@@ -10,11 +10,15 @@ let package = Package(
         .library(name: "LoggerWrapper", targets: ["LoggerWrapper"])
     ],
     dependencies: [
+       .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", from: "3.8.0")
+    ],
     ],
     targets: [
         .target(
             name: "LoggerWrapper",
-            dependencies: [],
+            dependencies: [
+		.product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")
+	    ],
             path: "LoggerWrapper",
             exclude: ["Info.plist"]
         )
