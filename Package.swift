@@ -18,7 +18,7 @@ let package = Package(
             dependencies: [
                 .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")
             ],
-            path: "LoggerWrapper/LoggerWrapper",
+            path: "LoggerWrapper",
             exclude: ["Info.plist"]
         )
     ]
