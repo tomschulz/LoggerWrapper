@@ -16,7 +16,8 @@ let package = Package(
         .target(
             name: "LoggerWrapper",
             dependencies: [
-		.product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")
+		.product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack"),
+                .product(name: "CocoaLumberjack", package: "CocoaLumberjack")
 	    ],
             path: "LoggerWrapper",
             exclude: ["Info.plist"]
